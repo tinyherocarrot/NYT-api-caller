@@ -1,14 +1,56 @@
 .page-header{
-	border: 1px solid blue;
+	border: 1px solid navy;
 	text-align:center;
-	font-size: 30px;
+	background-color:#043560;
+	color:white;
+	font-family: 'Francois One', sans-serif;
+	border-radius: 15px;
+
+}
+
+h1{
+	font-size:40px;
+}
+
+#pic{
+	float:left;
+	width:70px;
+	height:70px;
+
 }
 
 input{
 	width:100%;
 	height: 40px;
+	margin-bottom:15px;
 }
 
 button{
 	margin-top: 20px;
+	font-family: 'Rubik', sans-serif;
+}	
+
+.panel > .panel-heading{
+	background-color:#043560;
+	color:white;
+	background-image:none;
+}
+
+
+#searchbtn{
+	background-color:#A4C8F4;
+}
+
+#clearbtn{
+	background-color:#A4C8F4;
+}
+
+.form{
+	font-family: 'Rubik', sans-serif;
+	font-size:18px;
+}
+
+.panel-title{
+	font-family: 'Francois One', sans-serif;
+	font-size:25px;
 }

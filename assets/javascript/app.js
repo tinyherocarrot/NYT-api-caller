@@ -1,4 +1,5 @@
 var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+var apiKey = "api-key=" + "083040deb76744ca8c92a2ec79536c0d"
 var searchInput;
 var limit;
 var startYr;
@@ -8,12 +9,14 @@ var endYr;
 $("#searchbtn").on("click", function() {
 	event.preventDefault();
 	
-	searchInput = $("#search").val().trim();
-	limit = $("#records").val().trim();
-	startYr = $("#start").val().trim()
-	endYr = $("#end").val().trim();
+	searchInput = "q=" + $("#search").val().trim();
+	limit = "limit=" + $("#records").val().trim();
+	startYr = "begin_date=" + $("#start").val().trim() + "0101";
+	endYr = "end_date=" + $("#end").val().trim() + "0101";
 
-	console.log(searchInput);
+	// console.log(searchInput);
+queryURL += "?" + searchInput + "&" + startYr + "&" + endYr + "&" + apiKey;
+console.log(queryURL);
 });
 
 $("#clearbtn").on("click", function() {
@@ -21,7 +24,6 @@ $("#clearbtn").on("click", function() {
 });
 
 // Build query URL here
-queryURL +
 // url += '?' + $.param({
 //   'api-key': "083040deb76744ca8c92a2ec79536c0d",
 //   'q': "trump",
